@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="all-container">
+    <div class="container">
+        <header>
+            <h3>Tambahkan Tugas Baru</h3>
+        </header>
+
+        <main>
+        <section class="task-input">
+            <label for="taskInput">Assign New Task:</label>
+            <textarea id="taskInput" placeholder="Tulis tugas di sini..."></textarea>
+            <div class="priority">
+            <label for="priority">Priority Level Task:</label>
+            <select id="priority">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            </div>
+        </section>
+        <div id="submit" class="button-bawah">
+            <button onclick="addTask()"><strong>Submit</strong></button>
+        </div>
+        </main>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="profile">
+                <div class="row">
+                    <span>Nama</span>
+                    <span>: Usamah Ahmad Muflih</span>
+                </div>
+                <div class="row">
+                    <span>Jabatan</span>
+                    <span>: Developer</span>
+                </div>
+            </div>
+            <div class="date-time">
+                <div class="row">
+                    <span><div id="date" class="date"></div></span>
+                </div>
+                <div class="row">
+                    <span><div id="time" class="time"></div></span>
+                </div>
+            </div>
+        </header>
+        <main>
+
+        <section class="todo-section">
+            <h3>To Do List</h3>
+              <ul id="todoList">
+                <li>
+                    <div class="checkbox-todo">
+                        <div class="checkbox">
+                            <input type="checkbox" class="check" id="checklist">
+                        </div>
+                        <div>
+                            <strong>Medium</strong> 
+                            <div class="name-todo">Meeting Client</div>
+                            <div class="time-stamp">12/12/2025</div>
+                        </div>
+                    </div>
+                    <button class="delete-btn">Delete</button>
+                </li>
+
+              </ul>
+        </section>
+
+        <section class="todo-section">
+        <h3>Done List</h3>
+
+        </section>
+
+        </main>
+
+        <div id="delete-all" class="button-bawah">
+            <button><strong>Delete All</strong></button>
+        </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
